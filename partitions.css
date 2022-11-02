@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Barre de navigation */
+
+.navbar {
+    background-color: #fabd72;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.nav_links a li img {
+    height: 40px;
+    width: 40px;
+}
+
+.nav_links a {
+    text-decoration: none;
+}
+
+.icon-box:hover .icon {
+    animation-name: shake;
+    animation-duration: 300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+}
+
+.icon-text {
+    display: none;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+/* Body */
+
+
+body {
+    background-color: #fff9f2;
+    margin: 0;
+    background-image: url("ressources/images/background4.png");
+    background-size: 100%;
+    background-repeat: repeat;
+
+}
+
+.entirePartitions {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+
+}
+
+#moonPartition,
+#pigPartition,
+#cherryPartition,
+#foxPartition {
+    width: 90%;
+    margin: auto;
+    border: 1px #ffd29c solid;
+    padding: 5px;
+    background-color: white;
+    display: none;
+}
+
+#crossButton {
+    position: absolute;
+    top: 3%;
+    left: 87%;
+    z-index: 3;
+    width: 18px;
+    display: none;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Schoolbell', cursive;
+    font-weight: 1;
+    margin-bottom: 1rem;
+}
+
+.partitionsNames {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin-top: 2rem;
+    margin: auto;
+}
+
+figure {
+    width: 80%;
+    height: 9rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    position: relative;
+    background-color: white;
+
+}
+
+figure::before,
+figure::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #ff0000, #ff8f00, #fbeb26, #4fe231, #00b6ff, #7000e8, #ff6df2);
+    width: 100%;
+    height: 100%;
+    background-size: 200%;
+    z-index: -1;
+    transform: scale(1.02);
+    animation: animate 20s infinite;
+}
+
+figure::after {
+    filter: blur(3px);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0, 0;
+    }
+
+    50% {
+        background-position: 300%, 0;
+    }
+
+    100% {
+        background-position: 0, 0;
+    }
+}
+
+figure img {
+    width: 60pt;
+    display: flex;
+    margin: auto;
+}
+
+figure figcaption {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+
+.desktopPage {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    min-height: 500px;
+}
+
+.desktopPage #pictures {
+    display: none;
+}
+
+.hideElement {
+    display: none;
+}
+
+.hidePartition {
+    display: none;
+}
+
+.showElement {
+    display: block;
+}
+
+.half {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Desktop version*/
+@media screen and (min-width: 800px) {
+
+    h2 {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    .half {
+        width: 50%;
+        justify-content: flex-end;
+    }
+
+    .partitionsNames {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 100%;
+        max-width: 650px;
+        margin: 0;
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 12rem;
+        height: 12rem;
+        margin: 15px 15px;
+    }
+
+    figure img {
+        margin: 10px;
+    }
+
+    .desktopPage #pictures {
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;
+        height: 100%;
+        margin-right: 10%;
+    }
+
+    #drawingBear {
+        height: 500px;
+        display: content;
+        margin-left: 10%;
+    }
+
+    .entirePartitions {
+        position: absolute;
+        left: 0;
+        margin-left: 50%;
+        width: 420px;
+    }
+
+    #foxPartition,
+    #moonPartition,
+    #pigPartition,
+    #cherryPartition {
+        width: 100%;
+
+        margin: 0;
+    }
+
+    #crossButton {
+        display: none;
+        position: absolute;
+        top: 3%;
+        left: 90%;
+        display: none;
+        z-index: 3;
+        width: 18px;
+        height: 18px;
+    }
+
+    .hidePartition {
+        display: none;
+    }
+
+    .showElement {
+        display: block;
+    }
+
+    .nav_links {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-left: 50px;
+    }
+
+    .icon-text {
+        display: initial;
+        align-items: center;
+        font-family: 'Schoolbell', cursive;
+        font-size: 1.3rem;
+        color: #fff9f2;
+        margin-left: 15px;
+    }
+
+    .icon-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

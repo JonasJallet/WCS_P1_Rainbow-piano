@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainbow piano</title>
+  <link rel="shortcut icon" href="ressources/images/rainbow.png" />
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <img class="logo" src="ressources/images/rainbow.png">
+      <ul class="nav_links">
+
+        <a href="index.html">
+          <div class="icon-box">
+            <li><img class="icon" src="ressources/images/icon-maison.png"></li>
+            <p class="icon-text">Accueil</p>
+          </div>
+        </a>
+
+        <a href="piano.html">
+          <div class="icon-box">
+            <li><img class="icon" src="ressources/images/icon-piano.png"></li>
+            <p class="icon-text">Piano</p>
+          </div>
+        </a>
+
+        <a href="partitions.html">
+          <div class="icon-box">
+            <li><img class="icon" src="ressources/images/icon-partition.png"></li>
+            <p class="icon-text">Partitions</p>
+          </div>
+        </a>
+
+        <a href="form.html">
+          <div class="icon-box">
+            <li><img class="icon" src="ressources/images/icon-contact.png"></li>
+            <p class="icon-text">Contact</p>
+          </div>
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2> Notre équipe</h2>
+    <section class="team">
+      <div class="image">
+        <figure>
+          <img class="team-img" src="ressources/images/team.jpg" />
+        </figure>
+      </div>
+      <p class="team-text">
+        Ce site web a été créé par les soins de Benjamin, Jonas, Charlène et Jesse d'après une idée proposée par
+        Jonas. <br><br>Il a pour vocation de permettre une première approche à la musique pour de jeunes enfants.
+        <br><br>C'est
+        aussi notre premier projet à la Wild Code School qui nous a permis de mettre en
+        application les notions abordées durant nos deux premières semaines de formation.
+      </p>
+    </section>
+    <h2> Contacte-nous !</h2>
+    <section class="form">
+      <img id="rocket" src="ressources/images/fusee.png" alt="">
+      <form action="" method="post">
+        <div>
+          <label for="name">Nom</label><br>
+          <input class="rainbow-box" type="text" id="name" name="user_name" placeholder="Écris ton nom ici" size="40"
+            required>
+        </div>
+        <div>
+          <label for="mail">Email</label><br>
+          <input class="rainbow-box" type="email" id="mail" name="user_mail" placeholder="Écris ton email ici"
+            size="40" required>
+        </div>
+        <div>
+          <label for="msg">Message</label><br>
+          <textarea class="rainbow-box" id="msg" name="user_message" placeholder="Écris ton message ici"
+            maxlength="432" rows="5" cols="40" required></textarea>
+        </div>
+        <div class="wrapper">
+          <button class="btn-action">
+            <img src="ressources/images/icon-contact.png">envoyer</button></a>
+          <div class="btn-rotate"></div>
+          <div class="ping"></div>
+      </div>
+      </form>
+      <img id="rocket" src="ressources/images/dinosaure.png" alt="">
+    </section>
+  </main>
+</body>
+
+</html>
